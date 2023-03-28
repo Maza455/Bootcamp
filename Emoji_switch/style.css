@@ -1,0 +1,48 @@
+/* CSS Code */
+
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    h1 {
+        color: #606060;
+        text-align: center;
+        text-decoration: underline;
+        }
+
+    body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        height: 100vh;
+    }
+
+    h3 {
+        background-color: #e3e3e3;
+        color: rgb(126, 92, 20);
+        text-align: end;
+    }
+ 
+    .emoji {
+        font-size: 12.5rem;
+        cursor: pointer;
+        user-select: none;
+    }
+
+    .closed {
+        display: none;
+    }
+
+    .open {
+        display: none;
+    }
+
+    .active {
+        display: block;
+    }
+
+
+
