@@ -34,17 +34,17 @@
 //     console.log("we cannot have negative years.")
 // }
 
-let num1 = 10;
-let num2 = 10**2;
-let num3 = 10**3;
+// let num1 = 10;
+// let num2 = 10**2;
+// let num3 = 10**3;
 
-// check the condition
-if(num1 > num2 && num1 > num3) {
-    console.log(num1)
-}
-else if (num2 > num1 && num2 > num3) {
-    console.log(num2)
-}
+// // check the condition
+// if(num1 > num2 && num1 > num3) {
+//     console.log(num1)
+// }
+// else if (num2 > num1 && num2 > num3) {
+//     console.log(num2)
+// }
 // else {
 //     console.log(num3)
 // }
@@ -87,4 +87,44 @@ else if (num2 > num1 && num2 > num3) {
 // }
 
 
+function submit() {
+    let num = document.querySelector('.number').value;
 
+//check if the number is even
+if(num % 2 == 0) {
+    alert("The number is even.");
+}
+
+// if the number is odd
+else {
+    alert("The number is odd.");
+}
+    }
+
+// let num = 4;
+// let num2 = 3;
+// let num3 = 5;
+// let num4 = 8;
+
+// //check if the number is even, odd or even nor odd
+// if(num % 2 == 0 && num3 % 2 == 0 ) {
+//     console.log("The number is even.");
+// } else if (num2 % 2 == 1 && num4 % 7 == 1 ) {
+//     console.log("The number is odd.");
+// } else {
+//     console.log("none of this is even nor odd");
+// }
+
+// let num = 2**2;
+// let num2 = 3;
+// let num3 = 5**2;
+// let num4 = 8;
+
+// //check if the number is even, odd or even nor odd
+// if(num % 2 == 1 || num3 % 2 == 0 ) {
+//     console.log("The number is even.");
+// } else if (num2 % 3 == 0 || num4 % 4 == 0 ) {
+//     console.log("The number is odd.");
+// } else {
+//     console.log("none of this is even nor odd.");
+// }
