@@ -138,12 +138,12 @@
 // console.log(numbers[0]);
 
 
-let numbers = [2, 9, 11, 3, 7, 5, 13, 4, 8, 15, 17, 19, 25, 28, 32, 45, 64, 72, 81, 99.]
-for (let i = 0; i <= numbers.length ; i+=1) {
-    if (numbers[i] % 2 == 0) {
-        console.log("Hello, " + numbers[i] + " is Even number");
-    } 
-}
+// let numbers = [2, 9, 11, 3, 7, 5, 13, 4, 8, 15, 17, 19, 25, 28, 32, 45, 64, 72, 81, 99.]
+// for (let i = 0; i <= numbers.length ; i+=1) {
+//     if (numbers[i] % 2 == 0) {
+//         console.log("Hello, " + numbers[i] + " is Even number");
+//     } 
+// }
 
 // let colors = ['White', 'Indigo', 'Light_Black'];
 // for (const color of colors){
@@ -159,3 +159,157 @@ for (let i = 0; i <= numbers.length ; i+=1) {
 
 // let anyYouth = people.some(person => person.age >= 18);
 // console.log(anyYouth); // true
+
+
+
+
+// FizzBuzz 
+
+for (var i = 1; i < 16; i++) {
+    if (i % 15 == 0) {
+        console.log("FizzBuzz"); // we have an if nested within our for loop, we have used the % (The modulus operator returns the remainder of an integer division) hence we use it to check if a number is divisible by 15.
+    
+    } else if (i % 3 == 0) {
+        console.log("Fizz");
+
+    } else if (i % 5 == 0) {
+        console.log("Buzz");
+
+    } else 
+    console.log(i);
+}
+
+// for (let i = 0; i < 100;) 
+//     console.log((++i % 3 ? '' : 'Fizz') + (i % 5 ? '' : 'Buzz') || i)
+
+
+
+// let testNames = ['Zukisa', 'Harry Potter', 'Smallz','', 'Ragnar', 'Scofield', 'Spikjo', 'Newtons']
+//   let getInitials = (fullName) => {
+//     let allNames = fullName.trim().split(' ');
+//     let initials = allNames.reduce((acc, curr, index) => {
+//       if(index === 0 || index === allNames.length - 1){
+//         acc = `${acc}${curr.charAt(0).toUpperCase()}`;
+//       }
+//       return acc;
+//     }, '');
+//     return initials;
+//   } 
+//   console.log(testNames.map(getInitials));
+
+
+
+// const array1 = [1, 2, 3];
+                
+//         const array2 = [11, 22, 33];
+
+//                 const mixedArray = []
+
+//                 mixedArray.push(array1[0],array2[0],array1[1],array2[1],array1[2],array2[2])
+                
+//                 console.log(mixedArray);              
+//  console.log(" ")
+
+
+
+ // frame
+//  function frame(arr) {
+//     function fill (str, length, char) {
+//         return (str.length < length) ? fill(str + char, length, char) : str;
+//     }
+
+//     let size = arr.map((str) => {
+//             return str.length;
+// })
+// .reduce((a, b) => {
+//         return Math.max(a, b);
+// });
+
+//     let line = fill('', size + 4, '*');
+
+//     arr = arr.map((element) => {
+//             return '* '+ fill(element, size, ' ') + ' *';
+// })
+//     arr.unshift(line);
+//     arr.push(line);
+
+//     return arr.join('\n');
+// }
+
+// console.log(frame(["Write", "good", "code", "every", "day"]));
+
+
+// // FRAME SOME TEXT 
+
+// function longestWord(str) {
+//     let words = str.split(" ");
+//     let size = 0;
+//     let max = [""];
+
+//     for (let i = 0; i < words.length; i++) {
+//         if (words[i].length >= size) {
+//             size = words[i].length;
+//             if (max[max.length - 1].length < words[i].length) {
+//                 max = [];
+//                 max.push(words[i]);
+//             } else {
+//                 max = [...max, words[i]];
+//             }
+//         }
+//     }
+
+//     return [...max];
+// }
+
+// console.log(longestWord("the quick brown fox ate my chickens"));
+
+// console.log(" ")
+
+// console.log(longestWord("once upon a time"));
+ 
+// console.log(" ")
+
+
+
+
+//* EVEN OR ODD 
+
+// function evenOrOdd(number) {
+//     if (number % 2 == 0) {
+//         return "even";
+//     } else {
+//         return "Odd";
+//     }
+
+// }
+// console.log(evenOrOdd(5));
+
+// console.log(" ")
+
+
+
+// let Arr = [20, 311, 12, 11, 13, 15, 4, 0, 10]
+// function splitOddAndEven(numbers) {
+//     let odd = [];
+//     let even = [];
+  
+//     for (let i = 0; i < numbers.length; i++) {
+//       if (numbers[i] % 2 === 0) {
+//         // number is even
+//         even.push(numbers[i]);
+//       } else {
+//         // number is not even (=odd)
+//         odd.push(numbers[i]);
+//       }
+//     }
+  
+//     // create an object with the odd and even array in it
+//     let myArr = {
+//       odd,
+//       even,
+//     };
+  
+//     return myArr;
+//   }
+
+//   console.log(splitOddAndEven(Arr));
