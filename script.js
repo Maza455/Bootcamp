@@ -165,19 +165,19 @@
 
 // FizzBuzz 
 
-for (var i = 1; i < 16; i++) {
-    if (i % 15 == 0) {
-        console.log("FizzBuzz"); // we have an if nested within our for loop, we have used the % (The modulus operator returns the remainder of an integer division) hence we use it to check if a number is divisible by 15.
+// for (var i = 1; i < 16; i++) {
+//     if (i % 15 == 0) {
+//         console.log("FizzBuzz"); // we have an if nested within our for loop, we have used the % (The modulus operator returns the remainder of an integer division) hence we use it to check if a number is divisible by 15.
     
-    } else if (i % 3 == 0) {
-        console.log("Fizz");
+//     } else if (i % 3 == 0) {
+//         console.log("Fizz");
 
-    } else if (i % 5 == 0) {
-        console.log("Buzz");
+//     } else if (i % 5 == 0) {
+//         console.log("Buzz");
 
-    } else 
-    console.log(i);
-}
+//     } else 
+//     console.log(i);
+// }
 
 // for (let i = 0; i < 100;) 
 //     console.log((++i % 3 ? '' : 'Fizz') + (i % 5 ? '' : 'Buzz') || i)
@@ -313,3 +313,152 @@ for (var i = 1; i < 16; i++) {
 //   }
 
 //   console.log(splitOddAndEven(Arr));
+
+
+// Sort from minimum to maximum
+// let numbers = [-3, -100, 10, 4, 6, 7, 20, 1]
+// numbers.sort(function(a,b) => a-b)
+// letters.sort()
+
+// Reversed functions
+// let myName = "Zukisa"
+
+
+
+// let points = [-3, -100, 10, 4, 6, 7, 20, 1];
+
+// for (let i = points.length -1; i > 0; i--) {
+//   let j = Math.floor(Math.random() * (i+1));
+//   let k = points[i];
+//   points[i] = points[j];
+//   points[j] = k;
+// }
+
+// console.log(points)
+
+
+// Reverse string
+
+// function reverseName(name) {
+//     let newName = "";
+//     for (let i = name.length - 1; i >= 0; i--) {
+//         newName += name[i];
+//     }
+//     return newName;
+// }
+// console.log(reverseName("Supercalifragilisticexpelidous"))
+
+// let arr = [" Zukisa", "Maza"].reverse();
+// console.log("Reversed array is : " + arr );
+
+
+
+// Reverse sort numbers
+// Declare and initialize an Array
+// let numbers = [-3, -100, 10, 4, 6, 7, 20, 1];
+         
+// Print Before sorting array
+// console.log("Original Array");
+// console.log(numbers);
+     
+// Sort elements using compare method
+// numbers.sort(function(a, b){return a - b});
+ 
+// console.log("After sorting-min to max num");
+     
+// Print sorted Numeric array
+// console.log(numbers);  
+
+
+// var arr = [-3, -100, 10, 4, 6, 7, 20, 1]
+// var sorted = arr.sort();
+// console.log("Returned string is : " + sorted );
+
+
+
+// function maxAndMin(numbers) {
+//     let obj = {}
+//     numbers.sort((a,b)=> a-b)
+//     obj.minNumber = numbers[0]
+//     obj.maxNumber = numbers[numbers.length - 1]
+//     return obj
+// }
+// maxAndMin([1, -5, 10, 0, -2, 8, -16, 32, -64, 128, -256])
+// let firstApp = maxAndMin([1, -5, 10, 0, -2, 8, -16, 32, -64, 128, -256])
+// console.log(firstApp)
+
+
+// function maxAndMin(numbers) {
+//     let obj = []
+//     numbers.sort((a,b)=> a-b)
+//     obj["minNumber"] = numbers[0]
+//     obj["maxNumber"] = numbers[numbers.length - 1]
+//     return obj
+// }
+
+// let firstApp = maxAndMin([1, -5, 10, 0, -2, 8, -16, 32, -64, 128, -256])
+// console.log(firstApp)
+
+// function reverseName(name) {
+//         let newName = "";
+//         for (let i = 10; i >= 0; i--) {
+//             newName += newName;
+        
+//     }
+//     console.log(newName);
+// }
+//     reverseName("I am testing")
+//     reverseName()
+
+
+// (function calculate() {
+//     let bpay, bonus, gross;
+//     bpay = 50000;
+ 
+//     //bonus is 20% of basic salary
+//     bonus = 0.2 * bpay;
+//     gross = bonus + bpay;
+ 
+//     console.log("Basic Pay: " + bpay);
+//     console.log("Bonus: " + bonus);
+//     console.log("Gross: " + gross);
+// })();
+
+
+
+// Parameters
+// function calcSalary(hr, h, d) {
+//     let salary = hr*h*d
+//     console.log(salary)
+// }
+// calcSalary(32,8,20)
+
+// function calcSalary(hr, h, d, pci=1.00) {
+//     return hr*h*d*pci
+// }
+// console.log(calcSalary(32,8))
+
+// function emailGen(fname = "Zuks", sname = "Meizo") {
+//     return fname + "." + sname + "@gsb.co.za"
+// }
+// console.log(emailGen())
+
+
+// function emailGen() {
+//     let newEmail = fname + "." + sname + "@gsb.co.za"
+//     return newEmail.toLowerCase();
+// }
+// console.log(emailGen(fname = "Meizo", sname = "Laizo"))
+
+
+
+
+let num1 = [1, 3, 5, 7]
+let num2 = [0, 2, 4, 6]
+let num3 = [...num1, ...num2]
+let num4 = num1.concat(num2)
+
+console.log("This is num3", num3)
+console.log("This is num4", num4)
+
+
