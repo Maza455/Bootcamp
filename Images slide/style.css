@@ -4,7 +4,7 @@ body {font-family: Verdana, sans-serif; margin:0}
 img {vertical-align: middle;}
 
 .slideshow-container {
-  max-width: 500px;
+  max-width: 700px;
   position: relative;
   margin: auto;
 }
@@ -16,7 +16,7 @@ img {vertical-align: middle;}
   width: auto;
   padding: 16px;
   margin-top: -22px;
-  color: white;
+  color: rgb(212, 247, 14);
   font-weight: bold;
   font-size: 18px;
   transition: 0.6s ease;
@@ -30,11 +30,11 @@ img {vertical-align: middle;}
 }
 
 .prev:hover, .next:hover {
-  background-color: rgba(150, 185, 22, 0.8);
+  background-color: rgba(13, 218, 229, 0.8);
 }
 
 .text {
-  color: #f2f2f2;
+  color: #bb2424;
   font-size: 15px;
   padding: 8px 12px;
   position: absolute;
@@ -56,14 +56,14 @@ img {vertical-align: middle;}
   height: 15px;
   width: 15px;
   margin: 0 2px;
-  background-color: #bbb;
+  background-color: #31a9e0;
   border-radius: 50%;
   display: inline-block;
   transition: background-color 0.6s ease;
 }
 
 .active, .dot:hover {
-  background-color: #717171;
+  background-color: #409466;
 }
 
 .fade {
@@ -79,4 +79,48 @@ img {vertical-align: middle;}
 /* On smaller screens, decrease text size */
 @media only screen and (max-width: 300px) {
   .prev, .next,.text {font-size: 11px}
+}
+
+
+/*footer*/
+footer{
+  padding:70px 15px;
+  background-color: #0c0c17;
+}
+
+footer .logo{
+  flex:0 0 100%;
+  max-width: 100%;
+  text-align: center;
+  font-size: 45px;
+  color:#8c2d7b;
+  font-weight: 900;
+}
+
+/*copyright*/
+.copyright{
+  background-color: #0c0c17;
+  border-top:1px solid #1d1d27;
+  padding:15px;
+}
+.copyright p{
+  color:#7a35b3;
+  margin:0;
+  text-align: center;
+  font-weight: 400;
+  font-size:15px;
+}
+
+.ham-burger .fa{
+  font-size:20px;
+  height:30px;
+  width:35px;
+  background-color: #522052;
+  color:#660066;
+  border-radius:3px;
+  line-height: 30px;
+  text-align: center;
+  cursor: pointer;
+  display: none;
+  border:1px solid #eeeeee;
 }
