@@ -3,6 +3,10 @@ body {font-family: Verdana, sans-serif; margin:0}
 .mySlides {display: none}
 img {vertical-align: middle;}
 
+body {
+	background-color: hsla(89, 43%, 51%, 0.3);
+}
+
 .slideshow-container {
   max-width: 700px;
   position: relative;
@@ -95,6 +99,43 @@ footer .logo{
   font-size: 45px;
   color:#8c2d7b;
   font-weight: 900;
+}
+
+ .fa:hover {
+  opacity: 0.9;
+}
+
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
+
+.fa-twitter {
+  background: #06b6f0;
+  color: white;
+}
+
+.fa-facebook {
+  background: #012b41;
+  color: white;
+}
+
+.fa-instagram {
+  background: #522052;
+  color: white;
+}
+
+.fa-pinterest {
+  background: red;
+  color: white;
+}
+
+.fa {
+  padding: 20px;
+  font-size: 40px;
+  width: 60px;
+  text-decoration: none;
+  margin: 5px 80px;
 }
 
 /*copyright*/
