@@ -1,4 +1,4 @@
-<body style="text-align:center;" id="body">
+<!-- <body style="text-align:center;" id="body">
     <h1 style="color:rgb(74, 227, 238);">
         <u>Numbers rules the universe</u>
     </h1>
@@ -30,4 +30,42 @@
             el_down.innerHTML = array1 + ' and ' + array2;
         }
     </script>
+</body> -->
+
+
+
+<!-- Splice -->
+<body style="text-align:center;" id="body">
+	<h1 style="color:rgb(73, 91, 4);">
+		Zuk's: Splice
+	</h1>
+	<h3>Using splice() method</h3>
+	<p id="GFG_UP" style="font-size: 16px;">
+
+	</p>
+	<button onclick="gfg_Run()">
+		click here!!
+	</button>
+	<p id="GFG_DOWN" style="color:rgb(228, 220, 108);
+							font-size: 20px;
+							font-weight: bold;">
+	</p>
+	<script>
+		var el_up = document.getElementById("GFG_UP");
+		var el_down = document.getElementById("GFG_DOWN");
+		var i, j, chunk = 2;
+		var array = [1, 2, 3, 4, 5, 6, 7, 8];
+		el_up.innerHTML = array;
+		
+		function gfg_Run() {
+			var array1 = array.splice(0, chunk);
+			var array2 = array.splice(0, chunk);
+			var array3 = array.splice(0, chunk);
+			var array4 = array.splice(0, chunk);
+			el_down.innerHTML = array1 + ' | '
+							+ array2 + ' | '
+							+ array3 + ' | '
+							+ array4;
+		}
+	</script>
 </body>
