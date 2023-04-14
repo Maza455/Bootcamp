@@ -85,6 +85,31 @@ body {
   .prev, .next,.text {font-size: 11px}
 }
 
+.text-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid rgb(90, 65, 92);
+}
+
+::placeholder {
+  color: #cac7ff;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,200;8..144,400&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--body-color);
+  font-family: "Roboto Flex", sans-serif;
+}
+
+
 
 /*footer*/
 footer{
@@ -137,6 +162,7 @@ footer .logo{
   text-decoration: none;
   margin: 5px 80px;
 }
+
 
 /*copyright*/
 .copyright{

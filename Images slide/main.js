@@ -10,6 +10,7 @@ function currentSlide(n) {
 }
 
 function showSlides(n) {
+
   let i;
   let slides = document.getElementsByClassName("mySlides");
   let dots = document.getElementsByClassName("dot");
@@ -22,6 +23,102 @@ function showSlides(n) {
     dots[i].className = dots[i].className.replace(" active", "");
   }
   slides[slideIndex-1].style.display = "block";  
-  dots[slideIndex-1].className += " active";
+  dots[slideIndex-1].className += " active"; 
 }
+
+$(document).on('ready', function(){
+
+  $('#chooseFile').on('click', function (e) {
+    url = $('#image-url').val();
+    
+    // check if it's empty
+		if (url === "")
+			alert('Please type a URL');		
+
+		url = addHTTP(url);
+		
+    if (checkURL(url)){
+
+      // get image size (and save dimensions in local storage)
+      getImageDimensions(url, updateBackgroundDimensions);
+      
+      localStorage.setItem('myImageURL', url);
+      updateBackgroundImage(url);
+
+      $('#fileModal').modal('hide');
+    }else{
+      alert('Not a valid image!');
+    }
+  });
+  
+  $('#resetImage').on('click', function (e) {
+    window.localStorage.clear();
+    location.reload();
+  });
+  
+  checkLocalStorage();
+});
+
+function checkLocalStorage(){
+  if(localStorage.getItem('myImageURL') &&
+    localStorage.getItem('myImageURLWidth') &&
+    localStorage.getItem('myImageURLHeight')) {
+
+    updateBackgroundDimensions(localStorage.getItem('myImageURLWidth'),localStorage.getItem('myImageURLHeight'));
+    updateBackgroundImage(localStorage.getItem('myImageURL'));
+  }
+}
+
+function updateBackgroundDimensions(w, h){
+  $('#image').css('width', w);
+  $('#image').css('height', h);
+  $('#image').css('background-size', w + 'px ' + h + 'px');
+}
+
+function updateBackgroundImage(url){
+  $('#image').css('background-image', 'url('+url+')');
+}
+
+function getImageDimensions(url, callback){
+  var img = $('<img src="'+url+'"/>').load(function(){
+    localStorage.setItem('myImageURLWidth', this.width);
+    localStorage.setItem('myImageURLHeight', this.height);
+    callback(this.width, this.height);
+  });
+}
+
+function addHTTP(url) {
+   if (!/^(f|ht)tps?:\/\//i.test(url)) {
+      url = "http://" + url;
+   }
+   return url;
+}
+
+function checkURL(url) {
+    return(url.match(/\.(jpeg|jpg|gif|png)$/) !== null);
+}
+
+
+
+
+
+// const fileSelector=document.getElementById('filetag');
+// const display = document.getElementById("preview");
+
+// fileSelector.addEventListener('change',(e)=>{
+//     let fileList = e.target.files;
+//     console.log(fileList)
+
+//     for(i=0; i<fileList.length; i++){
+//         let reader = new FileReader();
+
+//         reader.addEventListener("load", () =>{  
+//                 sessionStorage.setItem(`img${i}`,reader.result)
+//                 console.log(i)
+//         })
+//         reader.readAsDataURL(fileList[i]);
+//     }
+// })
+
+
 
