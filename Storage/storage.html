@@ -4,21 +4,39 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
     <link rel="stylesheet" href="storage.css" />
+    <title>Local/sessionStorage</title>
   </head>
   <body>
-    <div class="image-wrapper">
-    <div class="image-container">
-      <input type="file" id="file" />
-      <p><span id="count"></span> image stored in your local Storage</p>
+    <!-- <div class="slider">
+    <div id="img"> -->
+    <img class="show_pictures" src="" alt="">
       <div class="buttons">
-        <button onclick="prev()">Prev</button>
-        <button onclick="next()">Next</button>
+        </div> 
+        <button class="slider-btn previous" onclick="prev()"><b>Prev</b></button>
+        <button class="slider-btn next" onclick="next()"><b>Next</b></button>
+      </div>
+      </div>
+     
+        <div class="button">
+          <input id="img">
+          <button class="img" onclick="add()"><b>Add Images!!</b></button>
+          <button class="slider-btn delete" onclick="removeImage()"><b>Delete Image!!</b></button>
         </div>
-        <div class="new-image">
 
-      <div id="image_grid"></div>
+        <!-- <h2>Remove Item</h2>
+
+        <p>Click the button to delete the item:</p>
+
+        <button onclick="deleteItem()">Delete item</button>
+
+        <h2>Display Item</h2>
+
+        <p>Click the button to display the items's value:</p>
+
+      <button onclick="displayItem()">Display item</button>
+
+<p id="demo"></p> -->
     </div>
 
     <script src="storage.js"></script>
