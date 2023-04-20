@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Age Calculator</title>
+</head>
+<body>
+	<h1>Age Calculator</h1>
+	<p>Enter your date of birth:</p>
+	<label>Day:</label>
+	<input type="number" id="day" min="1" max="31">
+	<label>Month:</label>
+	<input type="number" id="month" min="1" max="12">
+	<label>Year:</label>
+	<input type="number" id="year" min="1900" max="2023">
+	<button onclick="calculateAge()">Calculate Age</button>
+	<p>Your age is <span id="age"></span>.</p>
+	
+	<h2>Age History</h2>
+	<ul id="age-history">
+		<!-- Age history will be added dynamically using JavaScript -->
+	</ul>
+
+	<script src="ageCalc.js"></script>
+</body>
+</html>
